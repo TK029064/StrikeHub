@@ -1,3 +1,8 @@
+if _G.Key == game:HttpGet('https://keysystem.boblox.ga/api/v1/getkey/StrikeHub') then
+work
+else
+no work
+end
 local ScreenGui = Instance.new("ScreenGui")
 local KeySystem = Instance.new("Frame")
 local Title = Instance.new("TextLabel")
@@ -54,21 +59,21 @@ Submit.TextScaled = true
 Submit.TextSize = 50.000
 Submit.TextWrapped = true
 Submit.MouseButton1Click:Connect(function()
-if Check.Text == game:HttpGet('https://keysystem-boblox.kelprepl.repl.co/api/v1/getkey/StrikeHub') then
-	    Submit.Text = "Correct Key"
-	    wait(1.5)
-	    Submit.Text = "Loading Scripts..."
-	    wait(2)
-	    KeySystem:Destroy()
-	
-	    loadstring(game:HttpGet('https://raw.githubusercontent.com/TK029064/Stike-Hub-load/main/TK02%232321'))()
-	    else
-	    Submit.Text = "Incorrect Key"
-	    wait(2)
-	    Submit.Text = "Submit"
-	    end
-	end)
-
+if Check.Text == game:HttpGet('https://keysystem.boblox.ga/api/v1/getkey/StrikeHub') then
+            _G.Key = Check.Text
+        Submit.Text = "Correct Key"
+        wait(1.5)
+        Submit.Text = "Loading Scripts..."
+        wait(2)
+        KeySystem:Destroy()
+    
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/TK029064/Stike-Hub-load/main/TK02%232321'))()
+        else
+        Submit.Text = "Incorrect Key"
+        wait(2)
+        Submit.Text = "Submit"
+        end
+end)
 UICorner_2.Parent = Submit
 
 UIGradient_2.Parent = Submit
@@ -108,8 +113,9 @@ DiscordInvite.TextScaled = true
 DiscordInvite.TextSize = 50.000
 DiscordInvite.TextWrapped = true
 DiscordInvite.MouseButton1Click:Connect(function()
-      KeySystem:Destroy()
-  end)
+    KeySystem:Destroy()
+end)
+
 
 UICorner_4.Parent = DiscordInvite
 
