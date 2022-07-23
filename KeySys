@@ -55,7 +55,7 @@ Submit.TextScaled = true
 Submit.TextSize = 50.000
 Submit.TextWrapped = true
 Submit.MouseButton1Click:Connect(function()
-if Check.Text == game:HttpGet('https://keysystem.boblox.ga/api/v1/getkey/StrikeHub') then
+if Check.Text == game:HttpGet('https://keysystem-boblox.kelprepl.repl.co/api/v1/getkey/StrikeHub') then
             _G.Key = Check.Text
         Submit.Text = "Correct Key"
         wait(1.5)
