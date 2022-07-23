@@ -1,0 +1,132 @@
+local ScreenGui = Instance.new("ScreenGui")
+local KeySystem = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local UICorner = Instance.new("UICorner")
+local UIGradient = Instance.new("UIGradient")
+
+
+local Submit = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local UIGradient_2 = Instance.new("UIGradient")
+local GetKey = Instance.new("TextButton")
+local UIGradient_3 = Instance.new("UIGradient")
+local UICorner_3 = Instance.new("UICorner")
+local DiscordInvite = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local UIGradient_4 = Instance.new("UIGradient")
+local Check = Instance.new("TextBox")
+local UICorner_5 = Instance.new("UICorner")
+local UIGradient_5 = Instance.new("UIGradient")
+
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+KeySystem.Name = "KeySystem"
+KeySystem.Parent = ScreenGui
+KeySystem.BackgroundColor3 = Color3.fromRGB(86, 86, 86)
+KeySystem.Position = UDim2.new(0.387687981, 0, 0.323346257, 0)
+KeySystem.Size = UDim2.new(0, 307, 0, 348)
+
+Title.Name = "Title"
+Title.Parent = KeySystem
+Title.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+Title.Size = UDim2.new(0, 307, 0, 50)
+Title.Font = Enum.Font.PatrickHand
+Title.TextScaled = true
+Title.Text = "Key"
+Title.TextColor3 = Color3.fromRGB(0, 0, 0)
+Title.TextSize = 50.000
+
+UICorner.Parent = Title
+
+UIGradient.Parent = Title
+
+Submit.Name = "Submit"
+Submit.Parent = KeySystem
+Submit.BackgroundColor3 = Color3.fromRGB(77, 77, 77)
+Submit.Position = UDim2.new(0.110749185, 0, 0.428160906, 0)
+Submit.Size = UDim2.new(0, 238, 0, 53)
+Submit.Font = Enum.Font.PatrickHand
+Submit.Text = "Submit"
+Submit.TextColor3 = Color3.fromRGB(0, 0, 0)
+Submit.TextScaled = true
+Submit.TextSize = 50.000
+Submit.TextWrapped = true
+Submit.MouseButton1Click:Connect(function()
+if Check.Text == game:HttpGet('https://keysystem-boblox.kelprepl.repl.co/api/v1/getkey/StrikeHub') then
+	    Submit.Text = "Correct Key"
+	    wait(1.5)
+	    Submit.Text = "Loading Scripts..."
+	    wait(2)
+	    KeySystem:Destroy()
+	
+	    loadstring(game:HttpGet('https://raw.githubusercontent.com/TK029064/Stike-Hub-load/main/TK02%232321'))()
+	    else
+	    Submit.Text = "Incorrect Key"
+	    wait(2)
+	    Submit.Text = "Submit"
+	    end
+	end)
+
+UICorner_2.Parent = Submit
+
+UIGradient_2.Parent = Submit
+
+GetKey.Name = "GetKey"
+GetKey.Parent = KeySystem
+GetKey.BackgroundColor3 = Color3.fromRGB(77, 77, 77)
+GetKey.Position = UDim2.new(0.172638431, 0, 0.632183909, 0)
+GetKey.Size = UDim2.new(0, 200, 0, 50)
+GetKey.Font = Enum.Font.PatrickHand
+GetKey.Text = "Get Key"
+GetKey.TextColor3 = Color3.fromRGB(0, 0, 0)
+GetKey.TextScaled = true
+GetKey.TextSize = 50.000
+GetKey.TextWrapped = true
+GetKey.MouseButton1Click:Connect(function()
+    setclipboard("https://discord.gg/JWE9c6xvgH")
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Discord Link";
+        Text = "Copied to ClipBoard";})
+    Duration = 5;
+end)
+
+UIGradient_3.Parent = GetKey
+
+UICorner_3.Parent = GetKey
+
+DiscordInvite.Name = "Discord Invite"
+DiscordInvite.Parent = KeySystem
+DiscordInvite.BackgroundColor3 = Color3.fromRGB(77, 77, 77)
+DiscordInvite.Position = UDim2.new(0.110749185, 0, 0.824712634, 0)
+DiscordInvite.Size = UDim2.new(0, 238, 0, 50)
+DiscordInvite.Font = Enum.Font.PatrickHand
+DiscordInvite.Text = "Close"
+DiscordInvite.TextColor3 = Color3.fromRGB(0, 0, 0)
+DiscordInvite.TextScaled = true
+DiscordInvite.TextSize = 50.000
+DiscordInvite.TextWrapped = true
+DiscordInvite.MouseButton1Click:Connect(function()
+      KeySystem:Destroy()
+  end)
+
+UICorner_4.Parent = DiscordInvite
+
+UIGradient_4.Parent = DiscordInvite
+
+Check.Name = "Check"
+Check.Parent = KeySystem
+Check.BackgroundColor3 = Color3.fromRGB(77, 77, 77)
+Check.Position = UDim2.new(0.172638431, 0, 0.186781615, 0)
+Check.Size = UDim2.new(0, 200, 0, 75)
+Check.Font = Enum.Font.PatrickHand
+Check.Text = "Enter Key..."
+Check.TextColor3 = Color3.fromRGB(0, 0, 0)
+Check.TextScaled = true
+Check.TextSize = 14.000
+Check.TextWrapped = true
+
+UICorner_5.Parent = Check
+
+UIGradient_5.Parent = Check
