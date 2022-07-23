@@ -1,4 +1,3 @@
-
 local ScreenGui = Instance.new("ScreenGui")
 local KeySystem = Instance.new("Frame")
 local Title = Instance.new("TextLabel")
