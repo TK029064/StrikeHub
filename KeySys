@@ -1,8 +1,4 @@
-if _G.Key == game:HttpGet('https://keysystem.boblox.ga/api/v1/getkey/StrikeHub') then
-work
-else
-no work
-end
+
 local ScreenGui = Instance.new("ScreenGui")
 local KeySystem = Instance.new("Frame")
 local Title = Instance.new("TextLabel")
